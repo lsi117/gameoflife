@@ -4,9 +4,21 @@ import './index.css';
 
 class Grid extends React.Component{
   render(){
+    const width = this.props.cols * 14;
+    let rowsArr = [];
+
+    let boxClass = "";
+      for (let i = 0; i < this.props.rows; i++){
+        for (let j = 0; j < this.props.cols; j++){
+          let boxId = i + " " + j;
+
+          boxClass = this.props.gridFull[i][j]
+        }
+      }
+
     return(
-        <div>
-          <h1>Grid</h1>
+        <div className="grid" style={{width: width}}>
+          {{rowsArr}}
         </div>
       )
   }
@@ -29,7 +41,11 @@ class Main extends React.Component{
       <div>
         <h1>Jelly Fish</h1>
         <p>Created by <a href="http://laureninacio.com/" target="_blank">Lauren Inacio</a></p>
-        <Grid />
+        <Grid
+        gridFull={this.state.gridFull}
+        rows={this.rows}
+        cols={this.cols}
+        />
         <h2>Generations: {this.state.generation}</h2>
       </div>
     )
