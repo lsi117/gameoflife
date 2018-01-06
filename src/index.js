@@ -170,6 +170,11 @@ class Main extends React.Component{
   });
 }
 
+  gridSize = (size) =>{
+
+  }
+
+
   componentDidMount(){
     this.seed();
     this.playButton();
