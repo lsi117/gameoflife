@@ -67,16 +67,16 @@ class Buttons extends React.Component {
             Fast
           </button>
           <button className="btn btn-default" onClick={this.props.seed}>
-            Seed
+            Add Microbes!
           </button>
-          <DropdownButton
-            title="Grid Size"
+          <DropdownButton title="Dropup" dropup id="split-button-dropup"
+            title="Pertri Dish Size"
             id="size-menu"
             onSelect={this.handleSelect}
           >
-            <MenuItem eventKey="1">20x10</MenuItem>
-            <MenuItem eventKey="2">50x30</MenuItem>
-            <MenuItem eventKey="3">70x50</MenuItem>
+            <MenuItem eventKey="1">Small</MenuItem>
+            <MenuItem eventKey="2">Medium</MenuItem>
+            <MenuItem eventKey="3">Large</MenuItem>
           </DropdownButton>
         </ButtonToolbar>
       </div>
@@ -128,7 +128,7 @@ class Main extends React.Component{
     this.playButton();
   }
 
-  slow = () =>{
+  fast = () =>{
     this.speed = 100;
     this.playButton();
   }
@@ -171,7 +171,22 @@ class Main extends React.Component{
 }
 
   gridSize = (size) =>{
+    switch (size){
+      case "1":
+      this.cols = 20;
+      this.rows = 10;
+      break;
 
+      case "2":
+      this.cols = 50;
+      this.rows = 30;
+      break;
+
+      default:
+      this.cols = 70;
+      this.rows = 50;
+    }
+    this.clear();
   }
 
 
