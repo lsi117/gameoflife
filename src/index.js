@@ -200,6 +200,7 @@ class Main extends React.Component{
       <div>
         <h1>Under The Microscope</h1>
         <p>Created by <a href="http://laureninacio.com/" target="_blank">Lauren Inacio</a></p>
+        <br />
         <Grid
         gridFull={this.state.gridFull}
         rows={this.rows}
