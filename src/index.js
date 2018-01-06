@@ -64,7 +64,7 @@ class Main extends React.Component{
     let gridCopy = arrayClone(this.state.gridFull);
     for (let i = 0; i < this.rows; i++){
       for(let j = 0; j < this.cols; j++){
-        if (Math.floor(Math.random() * 4 === 1)){
+        if (Math.floor(Math.random() * 4) === 1){
           gridCopy[i][j] = true;
         }
       }
@@ -72,6 +72,10 @@ class Main extends React.Component{
     this.setState({
       gridFull: gridCopy
     });
+  }
+
+  componentDidMount(){
+    this.seed();
   }
 
   render (){
