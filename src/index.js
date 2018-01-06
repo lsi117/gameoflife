@@ -43,6 +43,8 @@ class Grid extends React.Component{
 
 class Buttons extends React.Component{
   render(){
+    handleSelect = (e) =>}{}
+
     return(
       <div className="center">
       <ButtonToolbar>
