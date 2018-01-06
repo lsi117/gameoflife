@@ -74,14 +74,45 @@ class Main extends React.Component{
     });
   }
 
+  playButton = () =>{
+    clearInterval(this.intervalId)
+    this.intervalId = setInterval(this.play, this.speed);
+  }
+
+  play = () =>{
+    let gridOne = this.state.gridFull;
+    let gridTwo = arrayClone(this.state.gridFull)
+
+  for (let i = 0; i < this.rows; i++) {
+    for (let j = 0; j < this.cols; j++) {
+      let count = 0;
+      if (i > 0) if (gridOne[i - 1][j]) count++;
+      if (i > 0 && j > 0) if (gridOne[i - 1][j - 1]) count++;
+      if (i > 0 && j < this.cols - 1) if (gridOne[i - 1][j + 1]) count++;
+      if (j < this.cols - 1) if (gridOne[i][j + 1]) count++;
+      if (j > 0) if (gridOne[i][j - 1]) count++;
+      if (i < this.rows - 1) if (gridOne[i + 1][j]) count++;
+      if (i < this.rows - 1 && j > 0) if (gridOne[i + 1][j - 1]) count++;
+      if (i < this.rows - 1 && this.cols - 1) if (gridOne[i + 1][j + 1]) count++;
+      if (gridOne[i][j] && (count < 2 || count > 3)) gridTwo[i][j] = false;
+      if (!gridOne[i][j] && count === 3) gridTwo[i][j] = true;
+    }
+  }
+  this.setState({
+    gridFull: gridTwo,
+    generation: this.state.generation + 1
+  });
+}
+
   componentDidMount(){
     this.seed();
+    this.playButton();
   }
 
   render (){
     return(
       <div>
-        <h1>Jelly Fish Tank</h1>
+        <h1>Under The Microscope</h1>
         <p>Created by <a href="http://laureninacio.com/" target="_blank">Lauren Inacio</a></p>
         <Grid
         gridFull={this.state.gridFull}

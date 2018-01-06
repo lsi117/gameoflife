@@ -2,6 +2,7 @@ body {
   background-image: url(https://images.unsplash.com/photo-1455565624541-d5cb9bfbd0de?auto=format&fit=crop&w=1052&q=80);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Poppins', sans-serif;
 }
 
 .box {
@@ -42,6 +43,11 @@ body {
 a{
   text-decoration: none;
   color: white;
+}
+
+a:hover{
+  text-decoration: none;
+  color: #586E6C;
 }
 
 h1, h2, h3, h4, p {
