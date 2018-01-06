@@ -10,9 +10,12 @@ class Grid extends React.Component{
     let boxClass = "";
       for (let i = 0; i < this.props.rows; i++){
         for (let j = 0; j < this.props.cols; j++){
-          let boxId = i + " " + j;
+          let boxId = i + "_" + j;
 
-          boxClass = this.props.gridFull[i][j]
+          boxClass = this.props.gridFull[i][j] ? "box on" : "box off";
+          rowsArr.push(
+            <Box boxClass={boxClass} key={boxId} row={i} col={j} selectBox={this.props.selectBox} />
+            )
         }
       }
 
@@ -45,6 +48,7 @@ class Main extends React.Component{
         gridFull={this.state.gridFull}
         rows={this.rows}
         cols={this.cols}
+        selectBox={this.selectBox}
         />
         <h2>Generations: {this.state.generation}</h2>
       </div>
