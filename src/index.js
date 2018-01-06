@@ -39,7 +39,7 @@ class Main extends React.Component{
   render (){
     return(
       <div>
-        <h1>Jelly Fish</h1>
+        <h1>Jelly Fish Tank</h1>
         <p>Created by <a href="http://laureninacio.com/" target="_blank">Lauren Inacio</a></p>
         <Grid
         gridFull={this.state.gridFull}

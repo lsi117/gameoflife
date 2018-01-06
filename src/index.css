@@ -18,11 +18,11 @@ body {
 }
 
 .on {
-  background-color: green;
+  background-color: #A1CDE8;
 }
 
 .box:hover {
-  background: #00CCFF;
+  background: #94ECFA;
 }
 
 .center {
