@@ -40,6 +40,13 @@ class Grid extends React.Component{
   }
 }
 
+class Buttons extends React.Component{
+  render(){
+    return(
+      )
+  }
+}
+
 class Main extends React.Component{
   constructor(){
     super();
@@ -77,6 +84,10 @@ class Main extends React.Component{
   playButton = () =>{
     clearInterval(this.intervalId)
     this.intervalId = setInterval(this.play, this.speed);
+  }
+
+  pauseButton = () =>{
+    clearInterval(this.intervalId)
   }
 
   play = () =>{
@@ -121,6 +132,15 @@ class Main extends React.Component{
         selectBox={this.selectBox}
         />
         <h2>Generations: {this.state.generation}</h2>
+        <Buttons
+        playButton={this.playButton}
+        pauseButton={this.pauseButton}
+        slow={this.slow}
+        fast={this.fast}
+        clear={this.clear}
+        seed={this.seed}
+        gridSize={this.gridSize}
+        />
       </div>
     )
   }
