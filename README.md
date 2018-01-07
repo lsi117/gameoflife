@@ -5,7 +5,7 @@
 
 ### The Inspiration
 
-I created this game based on [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). There are some rules before making this "zero player" game. Be sure to check out the rules in the link provided above.
+I created this game based on [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). There are some rules before making this "zero player" game that I've provided below, directly from the link above. Be sure to check out the link above for any additional information about the Game of Life.
 
 ### Rules:
   1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
