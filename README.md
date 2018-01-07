@@ -18,4 +18,4 @@ In addition to this being based on Conway's Game of Life, I've also had the insp
 
 ## The Technologies
 
-This is an application built with `React`. I figured that if i'm going to improve my skills in React that I could start with this.
+This is an application built with `React.js`. I figured that if i'm going to improve my skills in `React.js` that I could start with this.
