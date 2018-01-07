@@ -34,7 +34,7 @@ class Grid extends React.Component{
       }
 
     return(
-        <div className="grid" style={{width: width}}>
+        <div className="grid center" style={{width: width}}>
           {rowsArr}
         </div>
       )
