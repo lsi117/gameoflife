@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {ButtonToolbar, MenuItem, DropdownButton} from 'react-bootstrap';
+import {ButtonToolbar, MenuItem, SplitButton} from 'react-bootstrap';
 
 class Box extends React.Component{
 selectBox = () =>{
@@ -69,7 +69,7 @@ class Buttons extends React.Component {
           <button className="btn btn-default btn-lg" onClick={this.props.seed}>
             Add Microbes!
           </button>
-          <DropdownButton title="Dropup" dropup id="split-button-dropup" className="btn-lg"
+          <SplitButton title="Dropup" dropup id="split-button-dropup" className="btn-lg"
             title="Pertri Dish Size"
             id="size-menu"
             onSelect={this.handleSelect}
@@ -77,7 +77,7 @@ class Buttons extends React.Component {
             <MenuItem eventKey="1">Small</MenuItem>
             <MenuItem eventKey="2">Medium</MenuItem>
             <MenuItem eventKey="3">Large</MenuItem>
-          </DropdownButton>
+          </SplitButton>
         </ButtonToolbar>
       </div>
       )
